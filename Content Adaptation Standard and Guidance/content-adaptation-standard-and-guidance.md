@@ -1,34 +1,38 @@
 # Content Adaptation Standard and Guidance
 
-This article introduces the workflows of Azure.cn technical content refreshing. The following diagrams show the 6 basic workflows for content team.
+This article introduces the workflows of Azure.cn technical content refreshing. The following diagrams show the 7 basic workflows for content team.
 
-1. Workflow for old services
+1. **Existing Services**
 
     ![existing-services](./media/content-adaptation-standard-and-guidance/existing-services.png)
 
-1. Workflow for new services
+1. **New Services**
 
     ![new-services](./media/content-adaptation-standard-and-guidance/new-services.png)
 
-1. Workflow for landing page refreshing
+1. **Landingpage**
 
     ![landing-page-refreshing](./media/content-adaptation-standard-and-guidance/landing-page-refreshing.png)
 
-1. Workflow for bugfix and hotfix
+1. **Bugfix**
 
-    ![bugfix-and-hotfix](./media/content-adaptation-standard-and-guidance/bugfix-and-hotfix.png)
+    ![bugfix](./media/content-adaptation-standard-and-guidance/bugfix.png)
 
-1. Workflow for AOG articles
+1. **Hotfix**
+
+    ![hotfix](./media/content-adaptation-standard-and-guidance/hotfix.png)
+
+1. **AOG Publish**
 
     ![AOG-articles](./media/content-adaptation-standard-and-guidance/AOG-articles.png)
 
-1. workflow for removing articles.
+1. **Removing Articles**
 
     ![removing-articles](./media/content-adaptation-standard-and-guidance/removing-articles.png)
 
 ## Synchronizing from the global site
 
-On the next day of the third Monday for each month, at about 11 am, Beijing time, all team members pull from [acom-pr](https://github.com/Azure/azure-content-pr/) Repo. After the synchronization finished, compare the SHA of the master branch to make sure all team members are using the same version of acom-pr.
+On the next day of the third Monday for each month, at about 11 am, Beijing time, all team members pull from [acom-pr](https://github.com/Azure/azure-content-pr/)(**Now changed to https://github.com/Microsoft/azure-docs-pr**) Repo. After the synchronization finished, compare the SHA of the master branch to make sure all team members are using the same version of acom-pr.
 
 To get the SHA of the current HEAD, run the following git command.
 
@@ -55,17 +59,16 @@ After Synchronizing from acom-pr, each team member should come up with a localiz
 
 #### Getting a list of updated files and new files
 
-Before Synchronizing from acom-pr, create a new branch from the master branch. Let's say "lastmonth". Merge master branch to "lastmonth" without fast-forward. For command line git client, run the following.
+1. Before Synchronizing from acom-pr, create a new branch from the master branch. Let's say "lastmonth". Merge master branch to "lastmonth" without fast-forward. For command line git client, run the following.
 
     git checkout lastmonth
-    git merge --no-ff master
+    	git merge --no-ff master
 
 For Source Tree, checkout to "lastmonth" by double clicking the "lastmonth" branch. Right click master branch, and choose **Merge master into current branch**.
 
 ![source-tree-merge-master](./media/content-adaptation-standard-and-guidance/source-tree-merge-master.png)
 
 In the popup dialogue, check the option **Create a new commit even if fast-forward is possible**, and click **Ok**.
-
 ![source-tree-no-ff](./media/content-adaptation-standard-and-guidance/source-tree-no-ff.png)
 
 After the merge is completed, a list of modified files can be view in the merge commit.

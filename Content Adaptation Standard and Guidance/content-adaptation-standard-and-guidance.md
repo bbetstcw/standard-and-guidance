@@ -82,7 +82,7 @@ After Synchronizing from acom-pr, each team member should come up with a localiz
 
     ![source-tree-commit-detail](./media/content-adaptation-standard-and-guidance/source-tree-commit-detail.png)
 
-    If the diff tool for git has been set, use the following command to compare a file with it's previous version.
+1. If the diff tool for git has been set, use the following command to compare a file with it's previous version.
 
         git diff HEAD:<relative path to file> d8b0aff91b:<relative path to file>
 

@@ -140,13 +140,12 @@ Azure - Storage|\*.blob.core.windows.net<br/>\*.queue.core.windows.net<br/>\*.ta
 Azure - Service Management|https://management.core.windows.net|https://management.core.chinacloudapi.cn
 Azure - Resource Manager (ARM)|https://management.azure.com|https://management.chinacloudapi.cn
 SQL Database|\*.database.windows.net|\*.database.chinacloudapi.cn
-Azure Portal|http://manage.windowsazure.com<br/>https://portal.azure.com|https://manage.windowsazure.cn<br/>https://portal.azure.cn
+Azure Portal|https://manage.windowsazure.com<br/>https://portal.azure.com|https://manage.windowsazure.cn<br/>https://portal.azure.cn
 Azure SQL Database Management API|https://management.database.windows.net|https://management.database.chinacloudapi.cn
 Service Bus|\*.servicebus.windows.net|\*.servicebus.chinacloudapi.cn
 ACS|\*.accesscontrol.windows.net|\*.accesscontrol.chinacloudapi.cn
 HDInsight|\*.azurehdinsight.net|\*.azurehdinsight.cn
 AAD|\*.onmicrosoft.com|\*.partner.onmschina.cn
-AAD PowerShell Login|Connect-msolservice|Connect-msolservice
 AAD Login|https://login.windows.net<br/>https://login.microsoftonline.com|https://login.chinacloudapi.cn
 AAD Graph API|https://graph.windows.net|https://graph.chinacloudapi.cn
 Azure Cognitive Service|https://api.projectoxford.ai/face/v1.0|https://api.cognitive.azure.cn/face/v1.0

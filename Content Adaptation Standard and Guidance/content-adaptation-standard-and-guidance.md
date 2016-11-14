@@ -131,31 +131,26 @@ Before sending PM review request and handing over to localization team, customiz
 
 The following is a list of Domains or endpoints that needs to be replaced in Mooncake.
 
-* cloudapp.net -> chinacloudapp.cn
-
-* windows.net -> chinacloudapi.cn
-
-* azurewebsites.net -> chinacloudsites.cn
-
-* azurehdinsight.net -> azurehdinsight.cn
-
-* trafficmanager.net -> trafficmanager.cn
-
-* onmicrosoft.com -> partner.onmschina.cn
-
-* azure-mobile.net -> azure-mobile.cn
-
-* azure.net -> chinacloudapi.cn
-
-* vault.azure.com -> vault.chinacloudapi.cn
-
-* cloudapp.azure.com -> chinacloudapp.cn
-
-* management.azure.com -> management.chinacloudapi.cn
-
-* portal.azure.com -> portal.azure.cn
-
-* login.microsoftonline.com -> login.chinacloudapi.cn
+Service Type |Global |Mooncake
+--|--|--
+Azure - regular|\*.windows.net|\*.chinacloudapi.cn
+Azure - Compute|\*.cloudapp.net|\*.chinacloudapp.cn
+Azure - Service Fabric Cluster|\*.cloudapp.azure.com|\*.chinaeast.chinacloudapp.cn
+Azure - Storage|\*.blob.core.windows.net<br/>\*.queue.core.windows.net<br/>\*.table.core.windows.net|\*.blob.core.chinacloudapi.cn<br/>\*.queue.core.chinacloudapi.cn<br/>\*.table.core.chinacloudapi.cn
+Azure - Service Management|https://management.core.windows.net|https://management.core.chinacloudapi.cn
+Azure - Resource Manager (ARM)|https://management.azure.com|https://management.chinacloudapi.cn
+SQL Database|\*.database.windows.net|\*.database.chinacloudapi.cn
+Azure Portal|http://manage.windowsazure.com<br/>https://portal.azure.com|https://manage.windowsazure.cn<br/>https://portal.azure.cn
+Azure SQL Database Management API|https://management.database.windows.net|https://management.database.chinacloudapi.cn
+Service Bus|\*.servicebus.windows.net|\*.servicebus.chinacloudapi.cn
+ACS|\*.accesscontrol.windows.net|\*.accesscontrol.chinacloudapi.cn
+HDInsight|\*.azurehdinsight.net|\*.azurehdinsight.cn
+AAD|\*.onmicrosoft.com|\*.partner.onmschina.cn
+AAD PowerShell Login|Connect-msolservice|Connect-msolservice
+AAD Login|https://login.windows.net<br/>https://login.microsoftonline.com|https://login.chinacloudapi.cn
+AAD Graph API|https://graph.windows.net|https://graph.chinacloudapi.cn
+Azure Cognitive Service|https://api.projectoxford.ai/face/v1.0|https://api.cognitive.azure.cn/face/v1.0
+Azure Media Services API Server URI |https://media.windows.net/api/ | China East: https://wamsshaclus001rest-hs.chinacloudapp.cn/API/<br/> China North: https://wamsbjbclus001rest-hs.chinacloudapp.cn/API/ 
 
 #### Link replacement
 
@@ -176,6 +171,11 @@ The following is a list of Domains or endpoints that needs to be replaced in Moo
 1. **Microsoft Azure**. "Microsoft Azure" Should be replaced by "Azure".
 
 1. **Free trial**. "Free trial" should be replaced with "1rmb trial".
+
+1. **Azure Login**. AzureChinaCloud Environment should be specified.
+
+    - Azure PowerShell - `Add-AzureAccount -EnvironmentName AzureChinaCloud` or `Add-AzureRmAccount -EnvironmentName AzureChinaCloud`
+    - Azure CLI - `azure login -e AzureChinaCloud`
 
 For term replacement, a tool has been developed with python. Here is the [GitHub Repo](https://github.com/rockboyfor/CustomizeTool).
 

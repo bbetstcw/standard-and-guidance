@@ -49,7 +49,7 @@ The output is something like this.
 
 `34694600271e0a594b2a8b6cca43152eb99445b1` is the SHA of current HEAD.
 
-Or, in Source Tree, open the acom-pr Repo, click Log/History, and choose the very first commit of master branch. The SHA can be seen in the commit detail panel.
+Or, in Source Tree, open the acom-pr Repo, click **Log/History**, and choose the very first commit of master branch. The SHA can be seen in the commit detail panel.
 
 ![source-tree-get-sha](./media/content-adaptation-standard-and-guidance/source-tree-get-sha.png)
 
@@ -59,12 +59,12 @@ After Synchronizing from acom-pr, each team member should come up with a localiz
 
 #### Getting a list of updated files and new files
 
-1. Before Synchronizing from acom-pr, create a new branch from the master branch. Let's say "lastmonth". Merge master branch to "lastmonth" without fast-forward. For command line git client, run the following.
+1. Before Synchronizing from acom-pr, create a new branch from the master branch. Let's say "**lastmonth**". Merge master branch to "**lastmonth**" without fast-forward. For command line git client, run the following.
 
         git checkout lastmonth
         git merge --no-ff master
 
-    For Source Tree, checkout to "lastmonth" by double clicking the "lastmonth" branch. Right click master branch, and choose **Merge master into current branch**.
+    For Source Tree, checkout to "**lastmonth**" by double clicking the "**lastmonth**" branch. Right click master branch, and choose **Merge master into current branch**.
 
     ![source-tree-merge-master](./media/content-adaptation-standard-and-guidance/source-tree-merge-master.png)
 
@@ -86,13 +86,13 @@ After Synchronizing from acom-pr, each team member should come up with a localiz
 
         git diff HEAD:<relative path to file> d8b0aff91b:<relative path to file>
 
-    Notice that, `d8b0aff91b` is the SHA of "lastmonth" before merging.
+    Notice that, `d8b0aff91b` is the SHA of "**lastmonth**" before merging.
 
-    For Source Tree, just select the updated file in the commit detail panel, and then press "ctrl+D".
+    For Source Tree, just select the updated file in the commit detail panel, and then press "**ctrl+D**".
 
 Compare each updated file to see if it needs to be translated again or not. Here are guidelines for updates that DO NOT need to be included.
 
-1. Updated \<tags\> or \<properities\> (but no "pageTitle" and "description").
+1. Updated **\<tags\>** or **\<properities\>** (but no "**pageTitle**" and "**description**").
 
 1. Added or deleted White spaces.
 
@@ -154,23 +154,24 @@ Azure Media Services API Server URI |https://media.windows.net/api/ | China East
 
 #### Link replacement
 
-1. Relative paths of articles should be replaced with the relative addresses on the site. For Example, "./virtual-machines-command-line-tools.md" should be replaced by "/documentation/articles/virtual-machines-command-line-tools/"
+1. Relative paths of articles should be replaced with the relative addresses on the site. For Example, "**./virtual-machines-command-line-tools.md**" should be replaced by "**/documentation/articles/virtual-machines-command-line-tools/**"
 
-1. MSDN or technet document should be replaced by the Chinese version. For Example, "[https://msdn.microsoft.com/library/ee460799.aspx](https://msdn.microsoft.com/library/ee460799.aspx)" should be replaced by "[https://msdn.microsoft.com/zh-cn/library/ee460799.aspx](https://msdn.microsoft.com/zh-cn/library/ee460799.aspx)", and "[https://technet.microsoft.com/library/dn282285.aspx](https://technet.microsoft.com/library/dn282285.aspx)" should be replaced by "[https://technet.microsoft.com/zh-cn/library/dn282285.aspx](https://technet.microsoft.com/zh-cn/library/dn282285.aspx)".
+1. MSDN or technet document should be replaced by the Chinese version. For Example, "**[https://msdn.microsoft.com/library/ee460799.aspx](https://msdn.microsoft.com/library/ee460799.aspx)**" should be replaced by "**[https://msdn.microsoft.com/zh-cn/library/ee460799.aspx](https://msdn.microsoft.com/zh-cn/library/ee460799.aspx)**", and "**[https://technet.microsoft.com/library/dn282285.aspx](https://technet.microsoft.com/library/dn282285.aspx)**" should be replaced by "**[https://technet.microsoft.com/zh-cn/library/dn282285.aspx](https://technet.microsoft.com/zh-cn/library/dn282285.aspx)**".
 
-1. Some wikipedia links can be replaced with the Chinese version. For Example, "[http://en.wikipedia.org/wiki/Adaptive_bitrate_streaming](http://en.wikipedia.org/wiki/Adaptive_bitrate_streaming)" should be replaced by "[http://zh.wikipedia.org/wiki/自适性串流](http://zh.wikipedia.org/wiki/自适性串流)"
+1. Some wikipedia links can be replaced with the Chinese version. For Example, "**[http://en.wikipedia.org/wiki/Adaptive_bitrate_streaming](http://en.wikipedia.org/wiki/Adaptive_bitrate_streaming)**" should be replaced by "**[http://zh.wikipedia.org/wiki/自适性串流](http://zh.wikipedia.org/wiki/自适性串流)**"
 
-1. Some other links which have been found in the QA section. For example, some MSDN links are redirected to Azure articles in global site. Those links should be replaced with a relative url.
+1. Some other links which have been found in the QA section. For example, some MSDN links are redirected to Azure articles in global site. Those links should be replaced with a relative url if exists.
 
 #### Other terminologies
 
-1. **Azure Region**. All Azure Region should be replaced by either "China North" or "China East".
+1. **Azure Region**. All Azure Region should be replaced by either "**China North**" or "**China East**".
 
-1. **Azure portal**. The new portal should be replaced by "Azure Portal Preview", and the classic portal should be replaced with "Azure Classic Management Portal".
+1. **Azure portal**. The Ibiza portal should be replaced by "**Azure Portal Preview**", and the classic portal should be replaced with "**Azure Classic Management Portal**".
 
-1. **Microsoft Azure**. "Microsoft Azure" Should be replaced by "Azure".
+1. **Microsoft Azure**. "**Microsoft Azure**" Should be replaced by "**Azure**".
 
-1. **Free trial**. "Free trial" should be replaced with "1rmb trial".
+1. **Free trial**. "**Free trial**" should be replaced with "**1rmb trial**".
+
 
 1. **Azure Login**. AzureChinaCloud Environment should be specified.
 
@@ -189,7 +190,7 @@ For some important articles, contents may not be suitable for Mooncake. However,
 
 For Example, in App Service of Mooncake Environment. Continuous deployment is not possible to be set through the Portal. However, it can be done for public Repo in GitHub with KUDU and Webhook. Since, the continuous deployment functionality is quite important for App Service, and it's related with Agile Development which is also very important for App Service. Customizing the article other than simply deleting it would be a good idea.
 
-However, if the features involved become available in Mooncake, those customizations will not be needed any more. That is what happened for Redis Cache. Before the new portal is available in Mooncake, Redis Cache could only be manageable with Azure PowerShell or Azure CLI. So, all portal solutions were replaced by command line solutions. After Redis Cache is available in the preview portal, all those customizations should be rolled back.
+However, if the features involved become available in Mooncake, those customizations will not be needed any more. That is what happened for Redis Cache. Before the Ibiza portal is available in Mooncake, Redis Cache could only be manageable with Azure PowerShell or Azure CLI. So, all portal solutions were replaced by command line solutions. After Redis Cache is available in the preview portal, all those customizations should be rolled back.
 
 ## Sending PM review
 
@@ -199,13 +200,13 @@ After the customizations are done, send the updated articles and new articles to
 
         pandoc -s -S <the md file name> -o <out put file>.docx
 
-1. If the modification of an article is minor, don't send it to PM.
+1. If the modification of an article is minor, no need to send it to PM.
 
 1. For new articles, highlight the customized parts. For updated articles, highlight the updated parts.
 
 1. If the PM has found out the screenshots are not suitable for Mooncake, and insist to customized those screenshots, customized them once, and tell the PM that content team is not supposed to do image customization.
 
-1. If the PM requires to get more details about the customizations that have been done, open "Track Changes" in the docx file, and instead of generating docx from the customized md file, edit it directly from the original version. Or, adding comments about the customizations that have been done is also a good idea.
+1. If the PM requires to get more details about the customizations that have been done, open "**Track Changes**" in the docx file, and instead of generating docx from the customized md file, edit it directly from the original version. Or, adding comments about the customizations that have been done is also a good idea.
 
 1. Ask for feedback and sign-off within 3 days, and tell the PM that correctness will be assumed if no feedback received.
 
@@ -213,7 +214,7 @@ After the customizations are done, send the updated articles and new articles to
 
 ## Content Refresh in Azure.cn
 
-After the articles are delivered to localization team, it will take about 1 week for them to translate those articles. The localized articles will be hand back through [zhcn-pr Repo](https://github.com/Azure/azure-content-zhcn-pr/). And then, the content refresh cycle of [techcontent Repo](https://github.com/wacn/techcontent/) can be started.
+Customized articles are delivered to localization team every Monday, the localized articles are expected to be hand back next Monday. The localized articles will be hand back through [zhcn-pr Repo](https://github.com/Azure/azure-content-zhcn-pr/). And then, the content refresh cycle of [techcontent Repo](https://github.com/wacn/techcontent/) can be started.
 
 ### <a name="qa-in-ppe"></a> QA in PPE
 
@@ -243,7 +244,7 @@ After the QA in PPE is done, updates should be deployed to Production.
 
 The workflow for new services is almost identical to the one for existing services, except that a new landing page for the new service needs to be generated, and the articles of the new service may not be in the heads-up for the localization team.
 
-There is a landing page functionality in [the team portal](http://acncontentteam.azurewebsites.net/landingpage/new/). Follow the steps to create a new landing page.
+There is a landing page functionality in [Mooncake Team portal](http://acncontentteam.azurewebsites.net/landingpage/new/). Follow the steps to create a new landing page.
 
 1. Open the Chinese landing page in the global site. Let's take Virtual Network as an example.
 
@@ -252,13 +253,13 @@ There is a landing page functionality in [the team portal](http://acncontentteam
     There are 6 things useful for the new landing page.
 
     * the left navigation (the whole html code of the navigation is needed)
-    * the service name ("虚拟网络")
-    * the url ("[https://azure.microsoft.com/zh-cn/documentation/services/virtual-network/](https://azure.microsoft.com/zh-cn/documentation/services/virtual-network/)")
-    * the subtitle ("Learn how to configure and monitor virtual networks in Azure")
+    * the service name ("**虚拟网络**")
+    * the url ("[**https://azure.microsoft.com/zh-cn/documentation/services/virtual-network/**](https://azure.microsoft.com/zh-cn/documentation/services/virtual-network/)")
+    * the subtitle ("**Learn how to configure and monitor virtual networks in Azure**")
     * the tutorial message (empty here)
-    * the tutorial list ("[Create a Virtual Network](https://azure.microsoft.com/zh-cn/documentation/articles/virtual-networks-create-vnet-arm-pportal/)")
+    * the tutorial list ("[**Create a Virtual Network**](https://azure.microsoft.com/zh-cn/documentation/articles/virtual-networks-create-vnet-arm-pportal/)")
 
-1. Right click the left navigation and choose "Inspect Element". Copy the whole html code of the \<ul\> tag. the html looks like the following.
+1. Right click the left navigation and choose "**Inspect Element**". Copy the whole html code of the **\<ul\>** tag. the html looks like the following.
 
         <ul>
          <li>
@@ -269,7 +270,7 @@ There is a landing page functionality in [the team portal](http://acncontentteam
             </li>
         ...
 
-1. In the [the team portal](http://acncontentteam.azurewebsites.net/landingpage/new/), enter the corresponding values.
+1. In [**Mooncake Team portal**](http://acncontentteam.azurewebsites.net/landingpage/new/), enter the corresponding values.
 
     ![landing-page-team-portal](./media/content-adaptation-standard-and-guidance/landing-page-team-portal.png)
 
@@ -277,29 +278,29 @@ There is a landing page functionality in [the team portal](http://acncontentteam
 
     ![landing-page-team-portal-generated](./media/content-adaptation-standard-and-guidance/landing-page-team-portal-generated.png)
 
-1. This is a blank landing page. Click "编辑" to enter the edit mode of the landing page.
+1. This is a blank landing page. Click "**编辑**" to enter the edit mode of the landing page.
 
     ![landing-page-team-portal-edited](./media/content-adaptation-standard-and-guidance/landing-page-team-portal-edited.png)
 
-    Contents can be edited by clicking the "pen". List items in the left navigation can be moved around, added, or deleted. Videos and service updates can be added or deleted.
+    Contents can be edited by clicking the "**pen**". List items in the left navigation can be moved around, added, or deleted. Videos and service updates can be added or deleted.
 
-1. After the editing is finished, click "保存" to save the page. And then, the landing page is updated.
+1. After the editing is finished, click "**保存**" to save the page. And then, the landing page is updated.
 
     ![landing-page-team-portal-updated](./media/content-adaptation-standard-and-guidance/landing-page-team-portal-updated.png)
 
-1. Click "生成导航json" to generate a json for the left navigation. Copy it and save as a json file. Please name the file as "documentation,leftnav,virtual-networks.json", and check in the file to VSO.
+1. Click "**生成导航json**" to generate a json for the left navigation. Copy it and save as a json file. Please name the file as "**documentation,leftnav,virtual-networks.json**", and check in the file to VSO.
 
-    For the naming strategy, "documentation,leftnav," is fixed, and "virtual-networks" is the service id, which means if an article's ms.service is "virtual-networks", the article is using this left navigation.
+    For the naming strategy, "**documentation,leftnav,**" is fixed, and "**virtual-networks**" is the service id, which means if an article's ms.service is "**virtual-networks**", the article is using this left navigation.
 
-1. Click "生成页面xml" to generate an xml for the landing page. Copy it and save as an xml file. Please name the file as "documentation,services,virtual-networks.xml", and check in the file to VSO.
+1. Click "**生成页面xml**" to generate an xml for the landing page. Copy it and save as an xml file. Please name the file as "**documentation,services,virtual-networks.xml**", and check in the file to VSO.
 
-    by naming the xml to be "documentation,services,virtual-networks.xml", the landing page can be accessed from the url "/documentation/services/virtual-networks/".
+    by naming the xml to be "**documentation,services,virtual-networks.xml**", the landing page can be accessed from the url "**/documentation/services/virtual-networks/**".
 
 1. After the json and xml files is generated, go through the QA cycle to review the new landing page. The process is the same as [above in content refresh](#qa-in-ppe), except that there is no branch in VSO for the json and xml files.
 
 ## Refreshing landing page
 
-All landing pages should be updated in the middle of every month. The same tool ([the team portal](http://acncontentteam.azurewebsites.net/landingpage/)) as above can be used to edit the exiting landing pages. Only the left navigation, subtitle, tutorial message, and tutorial list can be updated from the global. Videos need to be updated only if new Videos are uploaded to the media center. Service update need to be updated only if "[what-is-new](https://www.azure.cn/what-is-new/)" is updated.
+All landing pages should be updated in the middle of every month. The same tool ([Mooncake team portal](http://acncontentteam.azurewebsites.net/landingpage/)) as above can be used to edit the exiting landing pages. Only the left navigation, subtitle, tutorial message, and tutorial list can be updated from the global. Videos need to be updated only if new Videos are uploaded to the media center. Service update need to be updated only if "[**what-is-new**](https://www.azure.cn/what-is-new/)" is updated.
 
 After the json and xml files are updated, go through the same QA cycle. For more information, see [above in content refresh](#qa-in-ppe).
 
@@ -317,7 +318,7 @@ The authors of AOG articles may require to update exiting AOG articles or deploy
 
 Articles in global site may be deleted, and some external or internal feedbacks may point out that some articles are not suitable for Mooncake. Those articles should be deleted in both PPE and Production. For articles deleted in global, checking for replacements is also needed. To get the replacement for a deleted article, just go to the corresponding page in global site to see if there is a redirection.
 
-Since there might be references to the deleted articles in some other parts of Azure.cn, notification to Dev Team and Marketing Team is required.
+Since there might be references to the deleted articles in some other parts of Azure.cn, notification to Josephine and Marketing Team is required.
 
 After removing the articles from the Repo, deleting or replacing the references of them is also required, not only the md files, but also the json and xml files of landing pages.
 
@@ -327,4 +328,4 @@ For updating landing pages, see [above in "Articles for a new service"](#article
 
 Deleting the files from the Repo will not delete the corresponding pages in Azure.cn. To delete the pages, the corresponding HTML should be deleted from the storage. Deleting pages should be deleted from PPE storage right after the md files is deleted in stage branch, in case that other team members are doing QA in PPE.
 
-Pages could be deleted from Production storage only after Dev team and Marketing team's confirmation.
+Pages could be deleted from Production storage only after Josephine and Marketing team's confirmation.

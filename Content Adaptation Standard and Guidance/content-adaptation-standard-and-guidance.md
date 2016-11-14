@@ -61,35 +61,36 @@ After Synchronizing from acom-pr, each team member should come up with a localiz
 
 1. Before Synchronizing from acom-pr, create a new branch from the master branch. Let's say "lastmonth". Merge master branch to "lastmonth" without fast-forward. For command line git client, run the following.
 
-    git checkout lastmonth
-    	git merge --no-ff master
+        git checkout lastmonth
+        git merge --no-ff master
 
-For Source Tree, checkout to "lastmonth" by double clicking the "lastmonth" branch. Right click master branch, and choose **Merge master into current branch**.
+    For Source Tree, checkout to "lastmonth" by double clicking the "lastmonth" branch. Right click master branch, and choose **Merge master into current branch**.
 
-![source-tree-merge-master](./media/content-adaptation-standard-and-guidance/source-tree-merge-master.png)
+    ![source-tree-merge-master](./media/content-adaptation-standard-and-guidance/source-tree-merge-master.png)
 
-In the popup dialogue, check the option **Create a new commit even if fast-forward is possible**, and click **Ok**.
-![source-tree-no-ff](./media/content-adaptation-standard-and-guidance/source-tree-no-ff.png)
+    In the popup dialogue, check the option **Create a new commit even if fast-forward is possible**, and click **Ok**.
 
-After the merge is completed, a list of modified files can be view in the merge commit.
+    ![source-tree-no-ff](./media/content-adaptation-standard-and-guidance/source-tree-no-ff.png)
 
-For command line git client, run the following.
+1. After the merge is completed, a list of modified files can be view in the merge commit.
 
-    git log -m --name-status -1
+    For command line git client, run the following.
 
-For Source Tree, select the merge commit in **Log/History**, and the updated files can be viewed in the commit detail panel.
+        git log -m --name-status -1
 
-![source-tree-commit-detail](./media/content-adaptation-standard-and-guidance/source-tree-commit-detail.png)
+    For Source Tree, select the merge commit in **Log/History**, and the updated files can be viewed in the commit detail panel.
 
-If the diff tool for git has been set, use the following command to compare a file with it's previous version.
+    ![source-tree-commit-detail](./media/content-adaptation-standard-and-guidance/source-tree-commit-detail.png)
 
-    git diff HEAD:<relative path to file> d8b0aff91b:<relative path to file>
+    If the diff tool for git has been set, use the following command to compare a file with it's previous version.
 
-Notice that, `d8b0aff91b` is the SHA of "lastmonth" before merging.
+        git diff HEAD:<relative path to file> d8b0aff91b:<relative path to file>
 
-For Source Tree, just select the updated file in the commit detail panel, and then press "ctrl+D".
+    Notice that, `d8b0aff91b` is the SHA of "lastmonth" before merging.
 
-Compare each updated file to see if it need to be translated again or not. Here are guidelines for updates that DO NOT need to be included.
+    For Source Tree, just select the updated file in the commit detail panel, and then press "ctrl+D".
+
+Compare each updated file to see if it needs to be translated again or not. Here are guidelines for updates that DO NOT need to be included.
 
 1. Updated \<tags\> or \<properities\> (but no "pageTitle" and "description").
 
@@ -202,7 +203,7 @@ After the customizations are done, send the updated articles and new articles to
 
 1. For new articles, highlight the customized parts. For updated articles, highlight the updated parts.
 
-1. If the PM has found out the screenshots are not suitable for Mooncake, and insist to customized those screenshots, customized them once, do the customizations once, and tell the PM that content team is not supposed to do image customization.
+1. If the PM has found out the screenshots are not suitable for Mooncake, and insist to customized those screenshots, customized them once, and tell the PM that content team is not supposed to do image customization.
 
 1. If the PM requires to get more details about the customizations that have been done, open "Track Changes" in the docx file, and instead of generating docx from the customized md file, edit it directly from the original version. Or, adding comments about the customizations that have been done is also a good idea.
 
